@@ -1,5 +1,5 @@
 export interface User {
-  id: number; // או number - יש לוודא ב-Swagger
+  id: number; 
   name: string;
   email: string;
   role: 'customer' | 'agent' | 'admin';

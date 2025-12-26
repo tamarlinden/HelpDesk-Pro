@@ -9,6 +9,7 @@
   --primary: #449EA1;
   --primary-600: #3a8689;
   --primary-700: #306e71;
+  --primary-btn: #0CB7B8;
   --accent: #449EA1;
 
   --danger: #ef4444;
@@ -92,7 +93,7 @@ main {
   border-radius: var(--radius-md);
   background: linear-gradient(135deg, rgba(12, 183, 184, 0.10), rgba(12, 183, 184, 0.10));
   border: 1px solid rgba(12, 183, 184, 0.18);
-  color: var(--primary-700);
+  color: var(--primary-btn);
 }
 
 .navbar-links {
@@ -148,18 +149,19 @@ main {
   color: rgba(11, 31, 42, 0.92);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.40), rgba(20, 184, 198, 0.45));
+  background: linear-gradient(135deg,var(--primary-btn), var(--primary-btn));
   border: 1px solid rgba(20, 184, 198, 0.24);
 }
 
 .user-name {
   font-weight: 700;
   font-size: 13px;
+  color: var(--primary-btn);
 }
 
 .user-role {
   font-size: 12px;
-  color: var(--muted);
+  color: var(--primary-btn);
   padding: 4px 8px;
   border-radius: 999px;
   border: 1px solid rgba(14, 116, 144, 0.16);
@@ -194,7 +196,7 @@ main {
 
 .btn-primary {
   color: #ffffff;
-  background: linear-gradient(135deg, #0CB7B8, #0CB7B8);
+  background: linear-gradient(135deg, var(--primary-btn), var(--primary-btn));
   border-color: transparent;
   font-weight: 600;
 }
@@ -440,12 +442,24 @@ button:disabled {
 }
 
 .confirm-popup {
+  position: relative !important;
+  overflow: hidden !important;
   border-radius: var(--radius-lg) !important;
   padding: 40px 32px !important;
   box-shadow: var(--shadow-lg) !important;
   border: 1px solid var(--border) !important;
   background: #ffffff !important;
   text-align: center !important;
+}
+
+.confirm-popup::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 6px !important;
+  background: var(--primary-btn) !important;
 }
 
 .confirm-popup h3 {
@@ -471,7 +485,7 @@ button:disabled {
 }
 
 .confirm-btn-yes {
-  background: linear-gradient(135deg, #0CB7B8, #0CB7B8) !important;
+  background: linear-gradient(135deg, var(--primary-btn), var(--primary-btn)) !important;
   color: #ffffff !important;
   border: none !important;
   padding: 12px 32px !important;

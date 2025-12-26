@@ -1169,3 +1169,16 @@ select.form-input {
   white-space: nowrap;
   border-width: 0;
 }
+
+.tickets-page-wrapper .page-container {
+  text-align: right;
+}
+
+.tickets-page-wrapper .page-header {
+  text-align: right;
+}
+
+.tickets-page-wrapper .table th,
+.tickets-page-wrapper .table td {
+  text-align: right;
+}
